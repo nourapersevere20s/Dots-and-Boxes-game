@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Dots And Boxes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+		<link rel="icon" type="image/png" href="{{ url_for('static', filename='images/favicon-32.png') }}" sizes="32x32" />
+		<link rel="icon" type="image/png" href="{{ url_for('static', filename='images/favicon-16.png') }}" sizes="16x16" />
+        <script src="/static/js/jquery-1.11.0.min.js"></script>
+    <script src="/static/js/index.js"></script>
+
+  </head>
+  <body>
+   <div class="center-div">
+        <h1 class="header">Dots And Boxes</h1>
+        <div id="shade">
+            <div id ="playing">
+                <div class="loading"></div>
+                <div class="loading_text">Computer is Playing...</div>
+            </div>
+       </div>
+
+       <div id="play_area" class="play-area">
+        <canvas>Check browser settings, canvas not supported!</canvas>
+       </div>
+
+   </div>
+
+   <div class="board">
+
+            <div>
+                <h3>You <input type="color" value="#FFFF00" id="p1Colour" /></h3>
+                <div class="score" id="p1Score"> 0 </div>
+            </div>
+            <div>
+                <h3>Computer <input type="color" value="#FFFFFF" id="p2Colour" /></h3>
+                <div class="score" id="p2Score"> 0 </div>
+            </div>
+
+
+   </div>
+   <script>
+       init();
+   </script>
+
+  </body>
+</html>

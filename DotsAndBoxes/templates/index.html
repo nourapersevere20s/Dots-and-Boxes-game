@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Dots And Boxes</title>
+  <script src="/static/js/jquery-1.11.0.min.js"></script>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+		<link rel="icon" type="image/png" href="{{ url_for('static', filename='images/favicon-32.png') }}" sizes="32x32" />
+		<link rel="icon" type="image/png" href="{{ url_for('static', filename='images/favicon-16.png') }}" sizes="16x16" />
+        <style>
+    </style>
+  </head>
+  <body>
+   <div class="center-div">
+   <h1 class="index-header">Welcome To Dots And Boxes</h1>
+   <img class="intro-img" src="{{ url_for('static', filename='images/intro.jpeg') }}"  />
+
+       <form class="start-form" method="post" action="/game" >
+
+      <label class="select-lbl" for="board_size">Select Board Size</label>
+           <br> <br>
+       <select name="board_size" id="board_size">
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+       </select>
+       <br><br>
+       <input type="submit" class="start-btn" value="Start Game" onclick="start_game()">
+   </form>
+   </div>
+
+  </body>
+</html>
